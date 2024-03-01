@@ -1,0 +1,136 @@
+.housing {
+  margin: auto;
+
+  &_header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0 10px 0;
+
+    &_infos {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      &_title {
+        font-size: 36px;
+        margin: 0;
+      }
+
+      &_subtitle {
+        font-size: 20px;
+      }
+
+      &_tags {
+        display: flex;
+        flex-wrap: wrap;
+
+        &_tag {
+          font-size: 14px;
+          color: white;
+          background-color: #ff6060;
+          margin-right: 10px;
+          padding: 5px 10px;
+          border-radius: 10px;
+        }
+      }
+    }
+
+    &_hoster {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      &_infos {
+        display: flex;
+        align-items: center;
+
+        &_name {
+          width: 120px;
+          text-align: right;
+          margin-right: 5px;
+          font-size: 18px;
+        }
+
+        &_img {
+          width: 64px;
+          height: 64px;
+          border-radius: 30px;
+          object-fit: cover;
+        }
+      }
+
+      &_rating {
+        margin-top: 5px;
+        text-align: right;
+        &_star {
+          padding-left: 0.3rem;
+          font-size: 25px;
+          &_grey {
+            color: rgb(188, 186, 186);
+          }
+        }
+      }
+    }
+  }
+
+  &_collapses {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
+    &_container {
+      margin: 10px 0;
+      width: 50%;
+      @media screen and (max-width: 768px) {
+        width: auto;
+      }
+      & ul {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .housing {
+    &_header {
+      flex-direction: column;
+      margin-bottom: 0;
+
+      &_infos {
+        &_tags {
+          &_tag {
+            margin-bottom: 10px;
+          }
+        }
+      }
+
+      &_hoster {
+        flex-direction: row-reverse;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &_infos {
+          align-items: center;
+          &_name {
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+          }
+          &_img {
+            width: 32px;
+            height: 32px;
+            padding-right: 2px;
+          }
+        }
+
+        &_rating {
+          padding: 0 8px 2px 0;
+        }
+      }
+    }
+  }
+}

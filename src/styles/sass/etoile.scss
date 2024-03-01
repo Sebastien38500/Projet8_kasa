@@ -1,0 +1,12 @@
+.Stars {
+  width: 28px;
+  height: 28px;
+  padding-bottom: 4px;
+
+  @media (max-width: 768px) {
+    width: 18px;
+    height: 18px;
+    padding-top: 5px;
+  }
+}
+

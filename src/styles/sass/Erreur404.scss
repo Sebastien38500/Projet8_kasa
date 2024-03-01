@@ -1,0 +1,59 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 40vh;
+  color: #ff6060;
+  position: relative;
+
+  &_Number, &_Text, &_Link { 
+    position: absolute;
+    font-weight: 700; 
+  }
+
+  &_Number {
+    font-size: 260px;
+    width: 600px;
+
+    @media (max-width: 768px) {
+      font-size: 100px;
+      width: 200px;
+      height: 100px;
+      margin-bottom: 250px;
+    }
+  }
+
+  &_Text {
+    font-size: 35px;
+    margin-top: 350px;
+    height: 50px;
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      width: 260px;
+      margin-bottom: 360px;
+    }
+  }
+
+  &_Link {
+    font-size: 20px;
+    margin-top: 450px;
+    text-decoration: underline;
+
+    @media (max-width: 768px) {
+      font-size: 15px;
+      width: 220px;
+      height: 20px;
+      margin-bottom: 160px;
+    }
+
+    &:hover {
+      filter: brightness(0.5);
+    }
+  }
+}
+
+
+

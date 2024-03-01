@@ -1,0 +1,33 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+
+  &_title {
+    position: absolute;
+    z-index: 1;
+    color: white;
+    font-size: 50px;
+    font-weight: 500;
+
+    @media (max-width: 768px) {
+      font-size: 25px;
+      width: 65%;
+      padding-left: 15px;
+    }
+  }
+
+  &_img {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    filter: brightness(60%);
+
+    @media (max-width: 768px) {
+      height: 112px;
+    }
+  }
+}
